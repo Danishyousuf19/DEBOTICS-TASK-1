@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <button class="toggle-btn"><img src="img/x.png" width="30" height="30" alt=""> Chizza</button>
+    <div class="nav">
+
+        <ul id="item">
+            <li id="name">Chizza</li>
+            <li>Home</li>
+            <li>Cart</li>
+            <li>Login</li>
+            <li>Contact us</li>
+            <li>About us</li>
+        </ul>
+
+    </div>
+    <div><input type="text" placeholder="Search" name="" id="src"></div>
+    <script>
+        if ($(window).width() < 576) {
+            $(document).ready(function () {
+                $(".toggle-btn").click(function () {
+                    $("#item").toggle();
+                });
+
+            })
+        }
+    </script>
+    <div class="section">
+        <div class="outer">
+            <div class="inner fade" style=" display: block;"><img class="img" src="img/a.jpg" alt="">
+                <div class="caption">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    <button id="buy1" class="button">Buy Now</button>
+                </div>
+            </div>
+            <div class="inner fade" style=" display: block;"><img class="img" src="img/b.jpg" alt="">
+                <div class="caption">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    <button id="buy2" class="button">Buy Now</button>
+                </div>
+            </div>
+            <div class="inner fade" style=" display: block;"><img class="img" src="img/c.jpg" alt="">
+                <div class="caption">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    <button id="buy3" class="button">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("inner");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            } slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 2000);
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+            const navbarToggler = document.getElementById('navbar-toggler');
+            const navbarCollapse = document.getElementById('navbarSupportedContent');
+            navbarToggler.addEventListener('click', function () {
+                navbarCollapse.classList.toggle('active');
+            });
+        });
+        F
+    </script>
+
+</body>
+
+</html>
